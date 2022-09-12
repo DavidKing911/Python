@@ -20,20 +20,22 @@ def rand():
     '''
     Генерация случайного числа
     '''
-    rnd = random.randint(1, 100)
+    rnd = random.randint(0, 100)
     return rnd
 
 number = abs(get_number("Введите натуральное число: "))
+file = open("Seminar_4/file_4.txt", "w")
 
 def polynomial(k):
     '''
     Создание многочлена
     '''
     x = sm.Symbol("x")
-    polynom = 0
-    for i in range(-k, 0):
+    polynom = random.randint(1, 100)*x**(k)
+    for i in range(-k + 1, 0):
         polynom += rand()*x**abs(i)
     polynom += rand()
     return polynom
 
-print(f"k = {number} => {polynomial(number)} = 0")
+file.write(str(polynomial(number)) + " = 0")
+file.close()
