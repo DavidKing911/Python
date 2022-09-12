@@ -6,7 +6,6 @@ def summa_polynomials():
     '''
     Считает сумму двух многочленов
     '''
-    x = sm.Symbol("x")
     file_1 = open("Seminar_4/file_1.txt")
     file_2 = open("Seminar_4/file_2.txt")
     file_3 = open("Seminar_4/file_3.txt", "w")
