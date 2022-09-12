@@ -3,7 +3,7 @@
 # *Пример:*
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
-list_numbers = [2, 3, 4, 5, 6]
+list_numbers = [2, 3, 5, 6, 7, 4]
 list_numbers_2 = []
 
 def composition(list_num, list_num_2):
