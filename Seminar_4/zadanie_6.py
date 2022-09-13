@@ -11,6 +11,7 @@
 # Фредди Меркури 3
 # Денис Байцуров 4
 
+file = open("Seminar_4/file_8.txt", "r+", encoding="utf-8")
 def get_number(input_string):
     '''
     Проверка ввода на число
@@ -21,21 +22,21 @@ def get_number(input_string):
     except(ValueError):
         return get_number(input_string)
 
-list_num = [input("Введите имя, фамилию и балл студента через пробел: ") for i in range(get_number("Введите количество студентов: "))]
+list_num = []
+lines = file.readlines()
+for line in lines:
+    list_num.append(line.strip())
 
 def student_mark(list_number):
     '''
     Перевод в верхний регистр всех букв, если бал студента больше 4
     '''
-    print()
-    print("Исходный ввод данных:")
-    for i in range(len(list_number)):
-        print(list_number[i])
-    print()
-    print("Изменённые данные:")
+    file.seek(0)
     for i in range(len(list_number)):
         if int(str(list_number[i])[len(list_number[i]) - 1]) > 4:
             list_number[i] = str(list_number[i]).upper()
-        print(list_number[i])
+        # print(list_num[i])
+        file.write('\n' + str(list_num[i]))
+    file.close()
 
 student_mark(list_num)
