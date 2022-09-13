@@ -15,13 +15,11 @@ list_number = [get_number("Введите число: ") for i in range(get_numb
 list_number_2 = []
 
 def fill_list_num_2(list_num, list_num_2):
-    for i in range(len(list_num)):
-        count = 0
-        for j in range(len(list_num)):
-            if list_num[i] == list_num[j]:
-                count += 1
-        if count == 1:
-            list_num_2.append(list_num[i])
+    for i in list_num:
+        if i in list_num_2:
+            continue
+        else:
+            list_num_2.append(i)
     return list_num_2
 
 print(f"Исходная последовательность -> {list_number}")
