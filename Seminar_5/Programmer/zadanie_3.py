@@ -33,7 +33,7 @@ def sum_letters():
             summa += ord(char)
         if str(j[0]) in str(summa):
             list_3[0] = summa
-        new_list.append(tuple(list_3))
+            new_list.append(tuple(list_3))
     return new_list
 
 print(sum_letters())
