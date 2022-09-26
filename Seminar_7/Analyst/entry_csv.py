@@ -10,7 +10,7 @@ def write_cvs():
     lst.append(text)
     text = v.get_action('Номер телефона: ')
     lst.append(text)
-    text = v.get_action('Комментари: ')
+    text = v.get_action('Комментарий: ')
     lst.append(text)
     with open ('Seminar_7/Analyst/phone_book.csv', mode = 'a', encoding='utf-8') as w_file:
         file_writer = csv.writer(w_file, delimiter=' ', lineterminator='\r')
