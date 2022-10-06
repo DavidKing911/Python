@@ -10,12 +10,6 @@
 # I'm sure that the shells are sea shore shells.
 # Sample Output:
 # 19
-# text = set()
-# [text.update(input("Введите строку: ").split()) for i in range(int(input("Введите количество строк: ")))]
-# print(len(text))
-
-words = set()
-for _ in range(int(input())):
-    words.update(input().split())
-    print(words)
-print(len(words))
+text = set()
+[text.update(input("Введите строку: ").split()) for i in range(int(input("Введите количество строк: ")))]
+print(len(text))
