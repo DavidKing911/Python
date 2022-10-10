@@ -21,7 +21,7 @@ def choice(update, _):
     """
     text = update.message.text
     keyboard_remove = ReplyKeyboardRemove()
-    logs.logger("Пользователь выбрал операцию", text)
+    logs.logger(f"{update.effective_user.first_name} выбрал операцию", text)
     if text == '📔 ADD':
         update.message.reply_text('Введите имя', reply_markup=keyboard_remove)
         return ADD
